@@ -47,7 +47,7 @@ closeLightbox.addEventListener("click", function () {
 });
 
 galleryItem.forEach((element) => {
-  element.querySelector(".fa-plus").addEventListener("click", function () {
+  element.querySelector(".overlay").addEventListener("click", function () {
     lightbox.style.display = "flex";
     const ligthboxImage1 = element.querySelector("img").getAttribute("src");
     lightboxImage.setAttribute("src", ligthboxImage1);
