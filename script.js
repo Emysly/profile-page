@@ -36,6 +36,12 @@ const lightbox = document.querySelector(".lightbox");
 
 const lightboxImage = lightbox.querySelector("img");
 
+const b = document.querySelector(".buttons");
+
+const viewButton = b.querySelector(".view");
+
+const githubButton = b.querySelector(".github");
+
 closeLightbox.addEventListener("click", function () {
   lightbox.style.display = "none";
 });
@@ -43,7 +49,14 @@ closeLightbox.addEventListener("click", function () {
 galleryItem.forEach((element) => {
   element.querySelector(".fa-plus").addEventListener("click", function () {
     lightbox.style.display = "flex";
-    ligthboxImage = element.querySelector("img").getAttribute("src");
+    const ligthboxImage1 = element.querySelector("img").getAttribute("src");
+    lightboxImage.setAttribute("src", ligthboxImage1);
+    const ligthboxImageView = element.querySelector("img").getAttribute("view");
+    viewButton.setAttribute("href", ligthboxImageView);
+    const ligthboxImageGithub = element
+      .querySelector("img")
+      .getAttribute("github");
+    githubButton.setAttribute("href", ligthboxImageGithub);
   });
 });
 

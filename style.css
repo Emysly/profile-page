@@ -746,10 +746,43 @@ header .navbar ul li a.active::before {
   -o-border-radius: 50%;
 }
 
-.lightbox img {
+.lightbox .image img {
   max-width: 90%;
   max-height: 80%;
   display: block;
+  position: relative;
+}
+
+.lightbox .buttons {
+  position: absolute;
+}
+
+.lightbox a.button {
+  border-radius: 4px;
+  margin: 30px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  padding: 12px 25px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.5s ease;
+  background-color: transparent;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+
+.lightbox a.button:hover {
+  background-color: #ffffff;
+  color: #000000;
 }
 
 /* message text */
